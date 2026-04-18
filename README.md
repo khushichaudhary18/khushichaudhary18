@@ -1,6 +1,6 @@
 <hr>
 
-Date: 2026-04-18
+Date : 2026-04-18
 
 ```yaml
 Khushi Chaudhary
