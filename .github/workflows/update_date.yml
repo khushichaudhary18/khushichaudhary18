@@ -1,1 +1,28 @@
+name: Update Date in README
 
+on:
+  schedule:
+    - cron: "0 0 * * *"  
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Run script
+        run: |
+          chmod +x script.sh
+          ./script.sh
+
+      - name: Push changes
+        run: |
+          git push
