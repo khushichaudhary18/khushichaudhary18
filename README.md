@@ -1,8 +1,9 @@
 <hr>
 
+Date:
 
 ```yaml
-date: 
+
 Khushi Chaudhary
 ----------------
 pronouns: She/Her
