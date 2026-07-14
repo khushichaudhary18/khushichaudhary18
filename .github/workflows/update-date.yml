@@ -2,7 +2,9 @@ name: Update Date in README
 
 on:
   schedule:
+    # Every day at 00:00 UTC (05:45 Nepal Time)
     - cron: "0 0 * * *"
+
   workflow_dispatch:
 
 permissions:
@@ -16,24 +18,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Git
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Run script
-        run: |
-          chmod +x script.sh
-          ./script.sh
+      - name: Make script executable
+        run: chmod +x script.sh
 
-      - name: Commit & Push changes
+      - name: Update README date
+        run: ./script.sh
+
+      - name: Commit changes
         run: |
           git add README.md
 
           if git diff --cached --quiet; then
-            echo "No changes to commit"
+            echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "chore: auto update README date"
-          git push
+          git commit -m "chore: update README date"
+
+      - name: Push changes
+        run: git push
