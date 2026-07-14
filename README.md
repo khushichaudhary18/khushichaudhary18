@@ -1,16 +1,19 @@
-## Hi there 👋
+<hr>
 
-<!--
-**khushichaudhary18/khushichaudhary18** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Date : 2026-06-04
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```yaml
+Khushi Chaudhary
+----------------
+pronouns: She/Her
+hobbies: Coding, Writing, Music, etc.
+interests: Mobile & Web Development
+learning: JavaScript, PHP
+quote: "Never change yourself to fit into someone else’s story — you are the author of your own life."
+----------------
+contact:
+  email: khushichaudhary2063@gmail.com
+  facebook: Khushi Chaudhary
+  instagram: @khushi_chaudhary06
+  ```
+<hr>
