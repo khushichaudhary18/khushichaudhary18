@@ -2,9 +2,8 @@ name: Update Date in README
 
 on:
   schedule:
-    # Every day at 00:00 UTC (05:45 Nepal Time)
-    - cron: "0 0 * * *"
-
+    # Runs every day at 12:00 AM Nepal Time (18:15 UTC)
+    - cron: "15 18 * * *"
   workflow_dispatch:
 
 permissions:
@@ -14,14 +13,19 @@ jobs:
   update:
     runs-on: ubuntu-latest
 
+    env:
+      TZ: Asia/Kathmandu
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configure Git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "khushichaudhary18"
+          git config --global user.email "khushichaudhary2063@gmail.com"
 
       - name: Make script executable
         run: chmod +x script.sh
@@ -29,7 +33,7 @@ jobs:
       - name: Update README date
         run: ./script.sh
 
-      - name: Commit changes
+      - name: Commit and Push changes
         run: |
           git add README.md
 
@@ -39,6 +43,4 @@ jobs:
           fi
 
           git commit -m "chore: update README date"
-
-      - name: Push changes
-        run: git push
+          git push
