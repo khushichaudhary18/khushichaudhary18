@@ -14,6 +14,6 @@ quote: "Never change yourself to fit into someone else’s story — you are the
 contact:
   email: khushichaudhary2063@gmail.com
   facebook: Khushi Chaudhary
-  instagram: @khushi_chaudhary06
+  instagram: khushee322
   ```
 <hr>
