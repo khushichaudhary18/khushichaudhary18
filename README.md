@@ -15,5 +15,6 @@ contact:
   email: khushichaudhary2063@gmail.com
   facebook: Khushi Chaudhary
   instagram: khushee322
+  website: khushichaudhary.com.np
   ```
 <hr>
